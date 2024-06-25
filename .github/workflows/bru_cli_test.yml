@@ -47,5 +47,5 @@ jobs:
         if: success() || failure()
         with:
           name: Test Report
-          path: solutions/junit.xml
+          path: collection_bruno/junit.xml
           reporter: java-junit
