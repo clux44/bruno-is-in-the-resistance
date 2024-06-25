@@ -1,0 +1,15 @@
+meta {
+  name: personnage par faction
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/star-wars/people?faction=empire
+  body: none
+  auth: none
+}
+
+params:query {
+  faction: empire
+}

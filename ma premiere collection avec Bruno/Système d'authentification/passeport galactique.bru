@@ -1,0 +1,22 @@
+meta {
+  name: passeport galactique
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/star-wars/auth/galactic-passport
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  registrationNumber: {{numero_de_matricule}}
+  password: {{Mot_de_passe}}
+}
+
+script:post-response {
+  
+  
+  bru.setVar('passeport_galactique',res.body.galacticPassport)
+}
