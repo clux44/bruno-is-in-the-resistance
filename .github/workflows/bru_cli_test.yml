@@ -41,7 +41,6 @@ jobs:
       - name: Run tests
         run: |
           cd collection_bruno
-          npm install
           bru run --env ${{ env.ENVIRONMENT }} --output junit.xml --format junit --env-var password=${{ env.PASSWORD }}
       - name: Publish Test Report
         uses: dorny/test-reporter@v1
